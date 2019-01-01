@@ -1,0 +1,17 @@
+<svg width="224px" height="224px" viewBox="0 0 224 224" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M15,6.7049928 C14.8131685,6.51774013 14.5595176,6.4125072 14.295,6.4125072 C14.0304824,6.4125072 13.7768315,6.51774013 13.59,6.7049928 L9,11.2949928 C8.61,11.6849928 8.61,12.3149928 9,12.7049928 L13.59,17.2949928 C13.98,17.6849928 14.61,17.6849928 15,17.2949928 C15.39,16.9049928 15.39,16.2749928 15,15.8849928 L11.12,11.9949928 L15,8.1149928 C15.39,7.7249928 15.38,7.0849928 15,6.7049928 Z" id="path-1"></path>
+    </defs>
+    <g id="SimplyFi-flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-01-01-Checkout-flow-Business-details" transform="translate(-32.000000, -47.000000)">
+            <rect fill="#F8F8F8" x="0" y="0" width="1440" height="1024"></rect>
+            <g id="Icon-/-Keyboard-Arrow---Left-/-Rounded" transform="translate(132.000000, 147.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="icon/navigation/chevron_left_24px" fill-rule="nonzero"></g>
+                
+            </g>
+        </g>
+    </g>
+</svg>

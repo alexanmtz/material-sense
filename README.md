@@ -52,3 +52,6 @@ First run:
 
 Then:
 `docker run -p 2222:2222 material-sense`
+
+### Publish at Github pages
+`yarn deploy`

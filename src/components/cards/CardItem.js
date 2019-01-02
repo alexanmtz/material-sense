@@ -4,7 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import DescriptionIcon from '@material-ui/icons/Description'
+import DescriptionIcon from '@material-ui/icons/Description';
+import ButtonBar from '../buttons/ButtonBar';
 
 const styles = theme => ({
   paper: {
@@ -22,8 +23,16 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'flex-start'
   },
+  baseline: {
+    alignSelf: 'baseline',
+    marginLeft: theme.spacing.unit * 4
+  },
+  inline: {
+    display: 'inline-block',
+    marginLeft: theme.spacing.unit * 4,
+  },
   backButton: {
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing.unit * 2
   }
 })
 
@@ -41,8 +50,8 @@ class CardItem extends Component {
                 <DescriptionIcon />
               </Avatar>
             </div>
-            <div style={{ alignSelf: 'baseline', marginLeft: 80 }}>
-              <div style={{ display: 'inline-block' }}>
+            <div className={classes.baseline}>
+              <div className={classes.inline}>
                 <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
                   Months
                 </Typography>
@@ -50,7 +59,7 @@ class CardItem extends Component {
                   4 month(s)
                 </Typography>
               </div>
-              <div style={{ display: 'inline-block', marginLeft: 40 }}>
+              <div className={classes.inline}>
                 <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
                   Creation date
                 </Typography>
@@ -74,21 +83,7 @@ class CardItem extends Component {
               <Typography variant="h4" gutterBottom>
                 Once a month
               </Typography>
-              <div style={{ marginTop: 24 }}>
-                <Button
-                  onClick={() => null}
-                  className={classes.backButton}
-                >
-                  Delete
-                </Button>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  style={{ background: '#182841', color: 'white' }}
-                >
-                  Edit
-                </Button>
-              </div>
+              <ButtonBar />
             </div>
           </div>
         </Paper>

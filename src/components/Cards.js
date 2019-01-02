@@ -4,8 +4,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import CardItem from './cards/CardItem';
-
 import Topbar from './Topbar';
+import SectionHeader from './typo/SectionHeader';
 const backgroundShape = require('../images/shape.svg');
 
 const styles = theme => ({
@@ -39,13 +39,8 @@ class Cards extends Component {
           <Grid container justify="center"> 
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
-                <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
-                  Cards
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  One page with a list of a collection
-                </Typography>
-                  <CardItem />
+                <SectionHeader title="Cards" subtitle="One page with a list of a collection" />
+                <CardItem />
               </Grid>
             </Grid>
           </Grid>

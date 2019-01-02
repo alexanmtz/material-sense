@@ -1,4 +1,4 @@
-import React,  { Component } from 'react';
+import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { withRouter } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -160,7 +160,7 @@ class Wizard extends Component {
 
   goToDashboard = event => {
     const queryString = this.props.location.search
-    const parsed = queryString ? qs.parse(queryString) : {}
+    
     this.props.history.push({
       pathname: '/dashboard',
       search: queryString

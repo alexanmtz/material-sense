@@ -21,10 +21,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Fade from '@material-ui/core/Fade';
 import Back from './common/Back';
-import Months from './common/Months';
 
-const months = Months;
-const qs = require('query-string');
 const backgroundShape = require('../images/shape.svg');
 
 const logo = require('../images/logo.svg');
@@ -147,8 +144,6 @@ class Signup extends Component {
   render() {
 
     const { classes } = this.props;
-    const queryString = this.props.location.search
-    const parsed = queryString ? qs.parse(queryString) : {}
     const steps = getSteps();
     const { activeStep, loading } = this.state;
 

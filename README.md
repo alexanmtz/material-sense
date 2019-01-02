@@ -1,3 +1,12 @@
+# React Material UI template - Material Sense
+A full simple application for react material ui
+
+## Screenshots
+![Dashboard](screenshot-dashboard.png)
+![Signup](screenshot-signup.png)
+![Wizard](screenshot-wizard.png)
+![Cards](screenshot-cards.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

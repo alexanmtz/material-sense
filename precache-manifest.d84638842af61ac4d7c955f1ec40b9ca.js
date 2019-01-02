@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "4e6f5b7c8c551aa716df",
-    "url": "/material-sense/static/css/main.25621c15.chunk.css"
+    "revision": "8caa6450e6af5b713305",
+    "url": "/material-sense/static/css/main.e3a67901.chunk.css"
   },
   {
-    "revision": "4e6f5b7c8c551aa716df",
-    "url": "/material-sense/static/js/main.4e6f5b7c.chunk.js"
+    "revision": "8caa6450e6af5b713305",
+    "url": "/material-sense/static/js/main.8caa6450.chunk.js"
   },
   {
-    "revision": "f51cfafb1fa7c033293d",
-    "url": "/material-sense/static/js/1.f51cfafb.chunk.js"
+    "revision": "a721eb123713436d775a",
+    "url": "/material-sense/static/js/1.a721eb12.chunk.js"
   },
   {
     "revision": "09f4e86c218a577ad5da",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/material-sense/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "18b8f219ebc70995f9623b74a05577ee",
+    "revision": "b49826cbb349fba642d4471d3e1a5493",
     "url": "/material-sense/index.html"
   }
 ];

@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/material-sense/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "df4501001ded47e74f7f2d7b97c768fd",
+    "revision": "18b8f219ebc70995f9623b74a05577ee",
     "url": "/material-sense/index.html"
   }
 ];

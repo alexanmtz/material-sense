@@ -1,15 +1,15 @@
 {
-  "main.css": "/material-sense/static/css/main.e3a67901.chunk.css",
-  "main.js": "/material-sense/static/js/main.8caa6450.chunk.js",
-  "main.js.map": "/material-sense/static/js/main.8caa6450.chunk.js.map",
-  "static/js/1.a721eb12.chunk.js": "/material-sense/static/js/1.a721eb12.chunk.js",
-  "static/js/1.a721eb12.chunk.js.map": "/material-sense/static/js/1.a721eb12.chunk.js.map",
+  "main.css": "/material-sense/static/css/main.296fcd1a.chunk.css",
+  "main.js": "/material-sense/static/js/main.5c5d474a.chunk.js",
+  "main.js.map": "/material-sense/static/js/main.5c5d474a.chunk.js.map",
+  "static/js/1.074157b2.chunk.js": "/material-sense/static/js/1.074157b2.chunk.js",
+  "static/js/1.074157b2.chunk.js.map": "/material-sense/static/js/1.074157b2.chunk.js.map",
   "runtime~main.js": "/material-sense/static/js/runtime~main.09f4e86c.js",
   "runtime~main.js.map": "/material-sense/static/js/runtime~main.09f4e86c.js.map",
   "static/media/shape.svg": "/material-sense/static/media/shape.208f3d38.svg",
   "static/media/logo.svg": "/material-sense/static/media/logo.5d5d9eef.svg",
-  "static/css/main.e3a67901.chunk.css.map": "/material-sense/static/css/main.e3a67901.chunk.css.map",
+  "static/css/main.296fcd1a.chunk.css.map": "/material-sense/static/css/main.296fcd1a.chunk.css.map",
   "index.html": "/material-sense/index.html",
-  "precache-manifest.d84638842af61ac4d7c955f1ec40b9ca.js": "/material-sense/precache-manifest.d84638842af61ac4d7c955f1ec40b9ca.js",
+  "precache-manifest.08eb3684c61e3368dc6027b20b087df6.js": "/material-sense/precache-manifest.08eb3684c61e3368dc6027b20b087df6.js",
   "service-worker.js": "/material-sense/service-worker.js"
 }

@@ -8,13 +8,10 @@ import Grid from '@material-ui/core/Grid';
 import Slider from '@material-ui/lab/Slider';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-import TableFooter from '@material-ui/core/TableFooter';
 import SimpleLineChart from './SimpleLineChart';
-import Months from './common/Months'
+import Months from './common/Months';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import Loading from './common/Loading';
 
 import Topbar from './Topbar';
 
@@ -26,19 +23,18 @@ const backgroundShape = require('../images/shape.svg');
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: '#F8F8F8',
+    backgroundColor: theme.palette.grey['100'],
     overflow: 'hidden',
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',
     paddingBottom: 200
   },
-  mainTable: {
-    tableLayout: 'fixed',
-    marginBottom: 36
-  },
   grid: {
     width: 1200
+  },
+  loadingState: {
+    opacity: 0.05
   },
   paper: {
     padding: theme.spacing.unit * 3,
@@ -80,8 +76,8 @@ const styles = theme => ({
     height: 16,
     marginRight: 10,
     marginBottom: -2,
-    color: '#fff',
-    backgroundColor: '#17729D'
+    color: theme.palette.primary.contrastText,
+    backgroundColor: theme.palette.primary.main
   },
   interestAvatar: {
     display: 'inline-block',
@@ -90,8 +86,8 @@ const styles = theme => ({
     height: 16,
     marginRight: 10,
     marginBottom: -2,
-    color: '#fff',
-    backgroundColor: '#17729D80'
+    color: theme.palette.primary.contrastText,
+    backgroundColor: theme.palette.primary.light
   },
   inlining: {
     display: 'inline-block',
@@ -103,13 +99,10 @@ const styles = theme => ({
   noBorder: {
     borderBottomStyle: 'hidden'
   },
-  loadingState: {
-    opacity: 0.05
-  },
-  loadingMessage: {
-    position: 'absolute',
-    top: '40%',
-    left: '40%'
+  mainBadge: {
+    textAlign: 'center',
+    marginTop: theme.spacing.unit * 4,
+    marginBottom: theme.spacing.unit * 4
   }
 });
 
@@ -129,7 +122,7 @@ class Dashboard extends Component {
     data: []
   };
 
-  updateLoanValues() {
+  updateValues() {
     const { amount, period, start } = this.state;
     const monthlyInterest = (amount)*(Math.pow(0.01*(1.01), period))/(Math.pow(0.01, period - 1))
     const totalInterest = monthlyInterest * (period + start);
@@ -149,28 +142,28 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    this.updateLoanValues();
+    this.updateValues();
   }
 
   handleChangeAmount = (event, value) => {
     this.setState({amount: value, loading: false});
-    this.updateLoanValues();
+    this.updateValues();
   }
 
   handleChangePeriod = (event, value) => {
     this.setState({period: value, loading: false});
-    this.updateLoanValues();
+    this.updateValues();
   }
 
   handleChangeStart = (event, value) => {
     this.setState({start: value, loading: false});
-    this.updateLoanValues();
+    this.updateValues();
   }
 
   render() {
     const { classes } = this.props;
-    const { amount, period, start, monthlyPayment, totalPayment,
-      monthlyInterest, totalInterest, data, loading } = this.state;
+    const { amount, period, start, monthlyPayment,
+      monthlyInterest, data, loading } = this.state;
     const currentPath = this.props.location.pathname
 
     return (
@@ -314,12 +307,7 @@ class Dashboard extends Component {
                   <Grid spacing={24} container item xs={12} justify="center" style={{maxWidth: 'none'}}>
                     <Grid item xs={8} spacing={24}>
                       <Paper className={classes.paper} style={{position: 'relative'}}>
-                        <div style={loading ? {display: 'block'} : {display: 'none'}} className={classes.loadingMessage}>
-                          <span role='img' aria-label='emoji' style={{fontSize: 58, textAlign: 'center', display: 'inline-block', width: '100%'}}>👋</span>
-                          <Typography variant="h6">
-                            Waiting for input
-                          </Typography>
-                        </div>
+                        <Loading loading={loading} />
                         <div className={loading ? classes.loadingState : ''}>
                           <Typography variant="subtitle1" gutterBottom>
                             Some details
@@ -355,94 +343,22 @@ class Dashboard extends Component {
                   </Grid>
                   <Grid item xs={4}>
                     <Paper className={classes.paper} style={{position: 'relative'}}>
-                      <div style={loading ? {display: 'block', left: '30%'} : {display: 'none'}} className={classes.loadingMessage}>
-                        <span role='img' aria-label='emoji' style={{fontSize: 58, textAlign: 'center', display: 'inline-block', width: '100%'}}>👋</span>
-                        <Typography variant="h6">
-                          Waiting for input
-                        </Typography>
-                      </div>
+                      <Loading loading={loading} />
                       <div className={loading ? classes.loadingState : ''}>
                         <Typography variant="subtitle1" gutterBottom>
                           State
                         </Typography>
-                        
-                        <Table className={classes.mainTable}>
-                          <TableBody>
-                            <TableRow className={classes.noBorder}>
-                              <TableCell padding='none' style={{textAlign: 'left'}}>
-                                <Typography variant="subtitle2">
-                                  Number
-                                </Typography>
-                              </TableCell>
-                              <TableCell numeric padding='none' style={{textAlign: 'right'}}>
-                                <Typography variant="subtitle2" color="secondary">
-                                  {numeral(amount).format()}
-                                </Typography>
-                              </TableCell>
-                              <TableCell style={{textAlign: 'left'}}>
-                                <Typography variant="subtitle2" color="secondary">
-                                  USD
-                                </Typography>
-                              </TableCell>
-                            </TableRow>
-                            <TableRow className={classes.noBorder}>
-                              <TableCell padding='none' style={{textAlign: 'left'}}>
-                                <Typography variant="subtitle2">
-                                  Extra
-                                </Typography>
-                              </TableCell>
-                              <TableCell numeric padding='none' style={{textAlign: 'right'}}>
-                                <Typography variant="subtitle2" color="secondary">
-                                  0
-                                </Typography>
-                              </TableCell>
-                              <TableCell style={{textAlign: 'left'}}>
-                                <Typography variant="subtitle2" color="secondary">
-                                  USD
-                                </Typography>
-                              </TableCell>
-                            </TableRow>
-                            <TableRow>
-                              <TableCell padding='none' style={{textAlign: 'left'}}>
-                                <Typography variant="subtitle2">
-                                  Other
-                                </Typography>
-                              </TableCell>
-                              <TableCell numeric padding='none' style={{textAlign: 'right'}}>
-                                <Typography variant="subtitle2" color="secondary">
-                                  {numeral(totalInterest).format()}
-                                </Typography>
-                              </TableCell>
-                              <TableCell style={{textAlign: 'left'}}>
-                                <Typography variant="subtitle2" color="secondary">
-                                  USD
-                                </Typography>
-                              </TableCell>
-                            </TableRow>
-                          </TableBody>
-                          <TableFooter>
-                            <TableCell padding='none' style={{textAlign: 'left', paddingTop: 20}}>
-                              <Typography variant="h6">
-                                Costs
-                              </Typography>
-                            </TableCell>
-                            <TableCell numeric padding='none' style={{textAlign: 'right', paddingTop: 20}}>
-                              <Typography variant="h4" color="secondary">
-                                {numeral(totalPayment).format()}
-                              </Typography>
-                            </TableCell>
-                            <TableCell style={{textAlign: 'left', paddingTop: 20}}>
-                              <Typography variant="h6" color="secondary">
-                                USD
-                              </Typography>
-                            </TableCell>
-                          </TableFooter>
-                        </Table>
+                        <div className={classes.mainBadge}>
+                          <VerifiedUserIcon style={{fontSize: 72}} fontSize={'large'} color={'secondary'} />
+                          <Typography variant="headline" color={'secondary'} gutterBottom>
+                            Verified
+                          </Typography>
+                        </div>
                         <div className={classes.buttonBar}>
                           <Button to={{ pathname: "/dashboard", search: `?type=save` }} component={Link} variant="outlined" className={classes.actionButtom}>
                             Save
                           </Button>
-                          <Button to={{ pathname: "/dashboard", search: `?type=apply` }} component={Link} style={{background: '#182841'}} color='primary' variant="contained" className={classes.actionButtom}>
+                          <Button to={{ pathname: "/dashboard", search: `?type=apply` }} component={Link} color='primary' variant="contained" className={classes.actionButtom}>
                             Apply
                           </Button>
                         </div>

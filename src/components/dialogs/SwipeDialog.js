@@ -54,6 +54,12 @@ const styles = theme => ({
     flexDirection: 'column',
     justifyContent: 'center'
   },
+  stepsContainer: {
+    marginLeft: 72,
+    textAlign: 'left',
+    marginTop: 20,
+    height: 65
+  },
   bottomMargin: {
     marginBottom: theme.spacing.unit * 2
   }
@@ -87,8 +93,8 @@ class SwipeDialog extends Component {
     const { activeStep } = this.state;
     return (
       <BaseDialog {...this.props}>
-        <div style={{ maxWidth: 600, flexGrow: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-          <div style={{marginBottom: 20}}>
+        <div className={classes.container}>
+          <div className={classes.gutterBottom}>
             <img width={100} src={logo} />
           </div>
           <div>
@@ -123,7 +129,7 @@ class SwipeDialog extends Component {
               }
             />
           </div>
-          <div style={{marginLeft: 72, textAlign: 'left', marginTop: 20, height: 65}}>
+          <div className={classes.stepsContainer}>
             <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
               {tutorialSteps[activeStep].label}
             </Typography>
@@ -131,7 +137,7 @@ class SwipeDialog extends Component {
               {tutorialSteps[activeStep].description}
             </Typography>
           </div>
-          <div style={{width: '100%'}}>
+          <div>
             <Button component={Link} to='/dashboard' variant='contained' onClick={this.handleClose} color="primary" autoFocus>
                 Getting started
             </Button>

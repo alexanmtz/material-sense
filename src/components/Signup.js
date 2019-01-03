@@ -76,8 +76,6 @@ const styles = theme => ({
   }
 })
 
-
-
 const getSteps = () => {
   return [
     'User',
@@ -220,9 +218,9 @@ class Signup extends Component {
                           <Typography variant="body2" gutterBottom>
                             Sign and confirm loan agreement
                           </Typography>
-                          <div style={{textAlign: 'center', width: '100%', marginTop: 24}}>
-                              
-                          </div>
+                          <Typography variant="bod1" gutterBottom>
+                            One text to explain that
+                          </Typography>
                         </Grid>
                       </Grid>
                     </Paper>

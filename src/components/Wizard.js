@@ -65,35 +65,18 @@ const styles = theme => ({
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
+  },
+  borderColumn: {
+    borderBottom: `1px solid ${theme.palette.grey['100']}`,
+    paddingBottom: 24,
+    marginBottom: 24
+  },
+  flexBar: {
+    marginTop: 32,
+    display: 'flex',
+    justifyContent: 'center'
   }
 })
-
-const months = [
-  '01 December 2018',
-  '01 January 2019',
-  '01 February 2019',
-  '01 March 2019',
-  '01 April 2019',
-  '01 May 2019',
-  '01 June 2019',
-  '01 July 2019',
-  '01 August 2019',
-  '01 September 2019',
-  '01 October 2019',
-  '01 November 2019',
-  '01 December 2019',
-  '01 January 2020',
-  '01 March 2020',
-  '01 April 2020',
-  '01 May 2020',
-  '01 June 2020',
-  '01 July 2020',
-  '01 August 2020',
-  '01 September 2020',
-  '01 October 2020',
-  '01 November 2020',
-  '01 December 2020'
-]
 
 const getSteps = () => {
   return [
@@ -300,7 +283,7 @@ class Wizard extends Component {
                           </Button>
                         </div>
                       </div>
-                      <div style={{borderBottom: '1px solid #ddd', paddingBottom: 24, marginBottom: 24}}>
+                      <div className={classes.borderColumn}>
                         <Grid item container xs={12} style={{marginBottom: 32}}>
                           <Grid item xs={6}>
                             <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
@@ -354,7 +337,7 @@ class Wizard extends Component {
                             When to start
                           </Typography>
                           <Typography variant="h5" gutterBottom>
-                            { parsed ? months[parsed.start] : '01 February 2019'}
+                            01 February 2019
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -362,7 +345,7 @@ class Wizard extends Component {
                             When it ends?
                           </Typography>
                           <Typography variant="h5" gutterBottom>
-                            { parsed ? months[parseInt(parsed.period) + parseInt(parsed.start)] : '01 May 2019'}
+                            01 May 2019
                           </Typography>
                         </Grid>
                       </Grid>
@@ -461,23 +444,21 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                     <Paper className={classes.paper}>
                       <Grid item container xs={12}>
                         <Grid item xs={12}>
-                          <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
+                          <Typography variant="subtitle1" gutterBottom>
                             Congratulations 🎉
                           </Typography>
                           <Typography variant="body2" gutterBottom>
                             We have now a positive response
                           </Typography>
-                          <div style={{width: '100%', marginTop: 24}}>
-                            <Button fullWidth variant='outlined' style={{textTransform: 'uppercase'}}>
-                              Download the service invoice or whatever
-                            </Button>
-                          </div>
+                          <Button fullWidth variant='outlined'>
+                            Download the service invoice or whatever
+                          </Button>
                         </Grid>
                       </Grid>
                     </Paper>
                     </div>
                   )}
-                  <div style={{marginTop: 32, display: 'flex', justifyContent: 'center'}}>
+                  <div className={classes.flexBar}>
                     { activeStep !== 5 && (
                       <Button
                       disabled={activeStep === 0}
@@ -493,7 +474,6 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                       color="primary"
                       onClick={activeStep !== 5 ? this.handleNext : this.goToDashboard}
                       size='large'
-                      style={(this.state.activeStep === 3 && !this.state.termsChecked) ? {} : {background: '#182841', color: 'white'}}
                       disabled={this.state.activeStep === 3 && !this.state.termsChecked}
                     >
                       {this.stepActions()}

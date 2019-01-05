@@ -15,21 +15,56 @@ const styles = theme => ({
   },
   avatar: {
     margin: 10,
-    backgroundColor: '#E6ECFF',
-    color: 'black'
+    backgroundColor: theme.palette.grey['200'],
+    color: theme.palette.text.primary,
+  },
+  avatarContainer: {
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0,
+      marginBottom: theme.spacing.unit * 4
+    }
   },
   itemContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    }
   },
   baseline: {
     alignSelf: 'baseline',
-    marginLeft: theme.spacing.unit * 4
+    marginLeft: theme.spacing.unit * 4,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      textAlign: 'center',
+      alignItems: 'center',
+      width: '100%',
+      marginTop: theme.spacing.unit * 2,
+      marginBottom: theme.spacing.unit * 2,
+      marginLeft: 0
+    }
   },
   inline: {
     display: 'inline-block',
     marginLeft: theme.spacing.unit * 4,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0
+    }
+  },
+  inlineRight: {
+    width: '30%',
+    textAlign: 'right',
+    marginLeft: 50,
+    alignSelf: 'flex-end',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      margin: 0,
+      textAlign: 'center'
+    }
   },
   backButton: {
     marginRight: theme.spacing.unit * 2
@@ -42,10 +77,10 @@ class CardItem extends Component {
     const { classes } = this.props;
 
     return (
-      <div style={{ marginTop: 20 }}>
+      <div className={classes.root}>
         <Paper className={classes.paper}>
           <div className={classes.itemContainer}>
-            <div>
+            <div className={classes.avatarContainer}>
               <Avatar className={classes.avatar}>
                 <DescriptionIcon />
               </Avatar>
@@ -67,7 +102,7 @@ class CardItem extends Component {
                   01 February 2019
                 </Typography>
               </div>
-              <div style={{ display: 'inline-block', marginLeft: 40 }}>
+              <div className={classes.inline}>
                 <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
                   Amount
                 </Typography>
@@ -76,7 +111,7 @@ class CardItem extends Component {
                 </Typography>
               </div>
             </div>
-            <div style={{ width: '30%', textAlign: 'right', marginLeft: 50, alignSelf: 'flex-end' }}>
+            <div className={classes.inlineRight}>
               <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
                 Other Amount
               </Typography>

@@ -31,7 +31,8 @@ const styles = theme => ({
     paddingBottom: 200
   },
   grid: {
-    width: 1200
+    width: 1200,
+    margin: `0 ${theme.spacing.unit * 2}px`
   },
   loadingState: {
     opacity: 0.05
@@ -188,7 +189,7 @@ class Dashboard extends Component {
                   </div>
                 </div>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div>
                     <Typography variant="subtitle1" gutterBottom>
@@ -226,7 +227,7 @@ class Dashboard extends Component {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div>
                     <Typography variant="subtitle1" gutterBottom>
@@ -264,7 +265,7 @@ class Dashboard extends Component {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div>
                     <Typography variant="subtitle1" gutterBottom>
@@ -341,7 +342,7 @@ class Dashboard extends Component {
                         </div>
                       </Paper>
                   </Grid>
-                  <Grid item xs={4}>
+                  <Grid item xs={12} md={4}>
                     <Paper className={classes.paper} style={{position: 'relative'}}>
                       <Loading loading={loading} />
                       <div className={loading ? classes.loadingState : ''}>

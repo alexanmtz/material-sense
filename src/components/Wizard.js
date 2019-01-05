@@ -37,7 +37,21 @@ const styles = theme => ({
     paddingBottom: 500
   },
   grid: {
-    width: 1200
+    margin: `0 ${theme.spacing.unit * 2}px`
+  },
+  smallContainer: {
+    width: '60%'
+  },
+  bigContainer: {
+    width: '80%'
+  },
+  stepContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  stepGrid: {
+    width: '80%'
   },
   backButton: {
     marginRight: theme.spacing.unit,
@@ -166,8 +180,8 @@ class Wizard extends Component {
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
                 <Back />
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                  <div style={{width: 780}}>
+                <div className={classes.stepContainer}>
+                  <div className={classes.bigContainer}>
                     <Stepper classes={{root: classes.stepper}} activeStep={activeStep} alternativeLabel>
                       {steps.map(label => {
                         return (
@@ -179,7 +193,7 @@ class Wizard extends Component {
                     </Stepper>
                   </div>
                   { activeStep === 0 && (
-                  <div style={{width: 780}}>
+                  <div className={classes.bigContainer}>
                     <Paper className={classes.paper}>
                       <div className={classes.topInfo}>
                         <div>
@@ -218,7 +232,7 @@ class Wizard extends Component {
                     </div>
                   )}
                   { activeStep === 1 && (
-                  <div style={{width: 380}}>
+                  <div className={classes.smallContainer}>
                     <Paper className={classes.paper}>
                       <div>
                         <div style={{marginBottom: 32}}>
@@ -266,7 +280,7 @@ class Wizard extends Component {
                     </div>
                   )}
                   { activeStep === 2 && (
-                  <div style={{width: 780}}>
+                  <div className={classes.bigContainer}>
                     <Paper className={classes.paper}>
                       <div className={classes.topInfo}>
                         <div>
@@ -379,7 +393,7 @@ class Wizard extends Component {
                     </div>
                   )}
                   { activeStep === 3 && (
-                    <div style={{width: 780}}>
+                    <div className={classes.bigContainer}>
                       <Paper className={classes.paper}>
                         <div style={{marginBottom: 24}}>
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
@@ -424,7 +438,7 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                     </div>
                   )}
                   { activeStep === 4 && (
-                  <div style={{width: 380}}>
+                  <div className={classes.smallContainer}>
                     <Paper className={classes.paper}>
                       <Grid item container xs={12}>
                         <Grid item xs={12}>
@@ -440,7 +454,7 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                     </div>
                   )}
                   { (activeStep === 5 || activeStep === 6) && (
-                  <div style={{width: 380}}>
+                  <div className={classes.smallContainer}>
                     <Paper className={classes.paper}>
                       <Grid item container xs={12}>
                         <Grid item xs={12}>

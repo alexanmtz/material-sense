@@ -1,6 +1,6 @@
 import React,  { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -28,8 +28,7 @@ const styles = theme => ({
     marginBottom: 36
   },
   grid: {
-    width: 1200,
-    marginTop: 40
+    margin: `40px ${theme.spacing.unit * 2}px`,
   },
   paper: {
     padding: theme.spacing.unit * 3,
@@ -118,7 +117,7 @@ class Main extends Component {
         <div className={classes.root}>
           <Grid container justify="center"> 
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div style={{marginBottom: 40}}>
                     <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
@@ -135,7 +134,7 @@ class Main extends Component {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div style={{marginBottom: 40, height: 65}}>
                     <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
@@ -152,7 +151,7 @@ class Main extends Component {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div style={{marginBottom: 40, height: 65}}>
                     <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>

@@ -1,5 +1,13 @@
 # React Material UI template - Material Sense
 A full simple application for react material ui
+
+## Features
+- Responsive
+- Include a Graph using [recharts](https://github.com/recharts/recharts)
+- With [Router](https://github.com/ReactTraining/react-router) included
+- A docker container for production build
+- Created with [Create react app](https://github.com/facebook/create-react-app)
+
 ![Dashboard](screenshot-dashboard.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

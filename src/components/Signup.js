@@ -42,7 +42,31 @@ const styles = theme => ({
     paddingBottom: 500
   },
   grid: {
-    width: 1200
+    margin: `0 ${theme.spacing.unit * 2}px`
+  },
+  smallContainer: {
+    width: '60%'
+  },
+  bigContainer: {
+    width: '80%'
+  },
+  logo: {
+    marginBottom: 24,
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  stepContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  stepGrid: {
+    width: '80%'
+  },
+  buttonBar: {
+    marginTop: 32,
+    display: 'flex',
+    justifyContent: 'center'
   },
   button: {
     backgroundColor: theme.palette.primary['A100']
@@ -153,11 +177,11 @@ class Signup extends Component {
           <Grid container justify="center"> 
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
-                <div style={{marginBottom: 24, display: 'flex', justifyContent: 'center'}}>
+                <div className={classes.logo}>
                   <img src={logo} />
                 </div>
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                  <div style={{width: 780}}>
+                <div className={classes.stepContainer}>
+                  <div className={classes.stepGrid}>
                     <Stepper classes={{root: classes.stepper}} activeStep={activeStep} alternativeLabel>
                       {steps.map(label => {
                         return (
@@ -169,7 +193,7 @@ class Signup extends Component {
                     </Stepper>
                   </div>
                   { activeStep === 0 && (
-                  <div style={{width: 380}}>
+                  <div className={classes.smallContainer}>
                     <Paper className={classes.paper}>
                       <div>
                         <div style={{marginBottom: 32}}>
@@ -208,11 +232,11 @@ class Signup extends Component {
                     </div>
                   )}
                   { activeStep === 1 && (
-                  <div style={{width: 380}}>
+                  <div className={classes.smallContainer}>
                     <Paper className={classes.paper}>
                       <Grid item container xs={12}>
                         <Grid item xs={12}>
-                          <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
+                          <Typography variant="subtitle1" gutterBottom>
                             Sign & confirm
                           </Typography>
                           <Typography variant="body2" gutterBottom>
@@ -227,11 +251,11 @@ class Signup extends Component {
                     </div>
                   )}
                   { activeStep === 2 && (
-                  <div style={{width: 380}}>
+                  <div className={classes.smallContainer}>
                     <Paper className={classes.paper}>
                       <div>
                         <div style={{marginBottom: 32}}>
-                          <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
+                          <Typography variant="subtitle1" gutterBottom>
                             Permissions
                           </Typography>
                           <Typography variant="body2" gutterBottom>
@@ -239,7 +263,7 @@ class Signup extends Component {
                           </Typography>
                         </div>
                         <div>
-                          <Typography style={{textTransform: 'uppercase', marginBottom: 20}} color='secondary' gutterBottom>
+                          <Typography color='secondary' gutterBottom>
                             Accounts
                           </Typography>
                           <List component="nav">
@@ -262,7 +286,7 @@ class Signup extends Component {
                     </div>
                   )}
                   { activeStep === 3 && (
-                  <div style={{width: 780}}>
+                  <div className={classes.bigContainer}>
                     <Paper className={classes.paper}>
                       <div style={{display: 'flex', justifyContent: 'center'}}>
                         <div style={{width: 380, textAlign: 'center'}}>
@@ -291,7 +315,7 @@ class Signup extends Component {
                     </div>
                   )}
                   { activeStep !== 3 && (
-                     <div style={{marginTop: 32, display: 'flex', justifyContent: 'center'}}>
+                     <div className={classes.buttonBar}>
                      { activeStep !== 2 ? (
                        <Button
                        disabled={activeStep === 0}

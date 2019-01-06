@@ -37,7 +37,7 @@ const styles = theme => ({
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',
-    marginTop: 60,
+    marginTop: 10,
     padding: 20,
     paddingBottom: 500
   },
@@ -178,7 +178,7 @@ class Signup extends Component {
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
                 <div className={classes.logo}>
-                  <img src={logo} />
+                  <img width={240} src={logo} />
                 </div>
                 <div className={classes.stepContainer}>
                   <div className={classes.stepGrid}>

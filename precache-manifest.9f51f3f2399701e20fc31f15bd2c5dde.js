@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7db95744f3ec5c4604df",
+    "revision": "b2c6ddd495a50fd9d4b8",
     "url": "/material-sense/static/css/main.3871ef0e.chunk.css"
   },
   {
-    "revision": "7db95744f3ec5c4604df",
-    "url": "/material-sense/static/js/main.7db95744.chunk.js"
+    "revision": "b2c6ddd495a50fd9d4b8",
+    "url": "/material-sense/static/js/main.b2c6ddd4.chunk.js"
   },
   {
     "revision": "a0b127d3fd42a062387d",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/material-sense/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "438e469366f5eb76ff6abade756cfbb7",
+    "revision": "6e6720adf0f205f786bd6b47ce1e285e",
     "url": "/material-sense/index.html"
   }
 ];

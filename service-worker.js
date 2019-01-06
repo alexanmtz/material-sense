@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/material-sense/precache-manifest.126b7a1f26e3c29a3b2793e3640b20ae.js"
+  "/material-sense/precache-manifest.11f43fdb9e037b2dd4b281de954c27fd.js"
 );
 
 workbox.clientsClaim();

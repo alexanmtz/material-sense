@@ -32,7 +32,10 @@ const styles = theme => ({
   },
   grid: {
     width: 1200,
-    margin: `0 ${theme.spacing.unit * 2}px`
+    margin: `0 ${theme.spacing.unit * 2}px`,
+    [theme.breakpoints.down('sm')]: {
+      width: 'calc(100% - 20px)'
+    }
   },
   loadingState: {
     opacity: 0.05
@@ -50,8 +53,7 @@ const styles = theme => ({
   topBar: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 24
+    alignItems: 'center'
   },
   outlinedButtom: {
     textTransform: 'uppercase',
@@ -303,71 +305,67 @@ class Dashboard extends Component {
                   </div>
                 </Paper>
               </Grid>
-              <Grid container item xs={12}>
-                <div>
-                  <Grid spacing={24} container item xs={12} justify="center" style={{maxWidth: 'none'}}>
-                    <Grid item xs={8} spacing={24}>
-                      <Paper className={classes.paper} style={{position: 'relative'}}>
-                        <Loading loading={loading} />
-                        <div className={loading ? classes.loadingState : ''}>
-                          <Typography variant="subtitle1" gutterBottom>
-                            Some details
+              <Grid container spacing={24} xs={12} justify="center">
+                <Grid item xs={12} md={8} >
+                  <Paper className={classes.paper} style={{position: 'relative'}}>
+                    <Loading loading={loading} />
+                    <div className={loading ? classes.loadingState : ''}>
+                      <Typography variant="subtitle1" gutterBottom>
+                        Some details
+                      </Typography>
+                      <Typography variant="body2">
+                        Details about the graph
+                      </Typography>
+                      <div style={{marginTop: 14, marginBottom: 14}}>
+                        <div className={classes.inlining}>
+                          <Avatar className={classes.loanAvatar}></Avatar>
+                          <Typography className={classes.inlining} variant="subtitle2" gutterBottom>
+                            Type
                           </Typography>
-                          <Typography variant="body2">
-                            Details about the graph
-                          </Typography>
-                          <div style={{marginTop: 14, marginBottom: 14}}>
-                            <div className={classes.inlining}>
-                              <Avatar className={classes.loanAvatar}></Avatar>
-                              <Typography className={classes.inlining} variant="subtitle2" gutterBottom>
-                                Type
-                              </Typography>
-                              <Typography className={classes.inlining} color='secondary' variant="h6" gutterBottom>
-                                {numeral(monthlyPayment).format()} units
-                              </Typography>
-                            </div>
-                            <div className={classes.inlining}>
-                              <Avatar className={classes.interestAvatar}></Avatar>
-                              <Typography className={classes.inlining} variant="subtitle2" gutterBottom>
-                                Othe type
-                              </Typography>
-                              <Typography className={classes.inlining} color="secondary" variant="h6" gutterBottom>
-                                {numeral(monthlyInterest).format()} units
-                              </Typography>
-                            </div>
-                          </div>
-                          <div >
-                            <SimpleLineChart data={data} />
-                          </div>
-                        </div>
-                      </Paper>
-                  </Grid>
-                  <Grid item xs={12} md={4}>
-                    <Paper className={classes.paper} style={{position: 'relative'}}>
-                      <Loading loading={loading} />
-                      <div className={loading ? classes.loadingState : ''}>
-                        <Typography variant="subtitle1" gutterBottom>
-                          State
-                        </Typography>
-                        <div className={classes.mainBadge}>
-                          <VerifiedUserIcon style={{fontSize: 72}} fontSize={'large'} color={'secondary'} />
-                          <Typography variant="headline" color={'secondary'} gutterBottom>
-                            Verified
+                          <Typography className={classes.inlining} color='secondary' variant="h6" gutterBottom>
+                            {numeral(monthlyPayment).format()} units
                           </Typography>
                         </div>
-                        <div className={classes.buttonBar}>
-                          <Button to={{ pathname: "/dashboard", search: `?type=save` }} component={Link} variant="outlined" className={classes.actionButtom}>
-                            Save
-                          </Button>
-                          <Button to={{ pathname: "/dashboard", search: `?type=apply` }} component={Link} color='primary' variant="contained" className={classes.actionButtom}>
-                            Apply
-                          </Button>
+                        <div className={classes.inlining}>
+                          <Avatar className={classes.interestAvatar}></Avatar>
+                          <Typography className={classes.inlining} variant="subtitle2" gutterBottom>
+                            Othe type
+                          </Typography>
+                          <Typography className={classes.inlining} color="secondary" variant="h6" gutterBottom>
+                            {numeral(monthlyInterest).format()} units
+                          </Typography>
                         </div>
                       </div>
-                      </Paper>
-                    </Grid>
-                  </Grid>
-                </div>
+                      <div >
+                        <SimpleLineChart data={data} />
+                      </div>
+                    </div>
+                  </Paper>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Paper className={classes.paper} style={{position: 'relative'}}>
+                  <Loading loading={loading} />
+                  <div className={loading ? classes.loadingState : ''}>
+                    <Typography variant="subtitle1" gutterBottom>
+                      State
+                    </Typography>
+                    <div className={classes.mainBadge}>
+                      <VerifiedUserIcon style={{fontSize: 72}} fontSize={'large'} color={'secondary'} />
+                      <Typography variant="headline" color={'secondary'} gutterBottom>
+                        Verified
+                      </Typography>
+                    </div>
+                    <div className={classes.buttonBar}>
+                      <Button to={{ pathname: "/dashboard", search: `?type=save` }} component={Link} variant="outlined" className={classes.actionButtom}>
+                        Save
+                      </Button>
+                      <Button to={{ pathname: "/dashboard", search: `?type=apply` }} component={Link} color='primary' variant="contained" className={classes.actionButtom}>
+                        Apply
+                      </Button>
+                    </div>
+                  </div>
+                  </Paper>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>

@@ -23,17 +23,17 @@ const styles = theme => ({
     backgroundPosition: '0 400px',
     paddingBottom: 200
   },
-  mainTable: {
-    tableLayout: 'fixed',
-    marginBottom: 36
-  },
   grid: {
-    margin: `40px ${theme.spacing.unit * 2}px`,
+    width: 1200,
+    marginTop: 40,
+    [theme.breakpoints.down('sm')]: {
+      width: 'calc(100% - 20px)'
+    }
   },
   paper: {
     padding: theme.spacing.unit * 3,
     textAlign: 'left',
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   },
   rangeLabel: {
     display: 'flex',
@@ -53,8 +53,7 @@ const styles = theme => ({
   actionButtom: {
     textTransform: 'uppercase',
     margin: theme.spacing.unit,
-    width: 152,
-    height: 36
+    width: 152
   },
   blockCenter: {
     padding: theme.spacing.unit * 2,
@@ -63,12 +62,20 @@ const styles = theme => ({
   block: {
     padding: theme.spacing.unit * 2,
   },
+  box: {
+    marginBottom: 40,
+    height: 65
+  },
   inlining: {
     display: 'inline-block',
     marginRight: 10
   },
   buttonBar: {
     display: 'flex'
+  },
+  alignRight: {
+    display: 'flex',
+    justifyContent: 'flex-end'
   },
   noBorder: {
     borderBottomStyle: 'hidden'
@@ -119,7 +126,7 @@ class Main extends Component {
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
-                  <div style={{marginBottom: 40}}>
+                  <div className={classes.box}>
                     <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
                       First title
                     </Typography>
@@ -128,7 +135,7 @@ class Main extends Component {
                     </Typography>
                   </div>
                   <div style={{display: 'flex', justifyContent: 'flex-end'}}>                          
-                    <Button style={{background: '#182841'}} color='primary' variant="contained" className={classes.actionButtom}>
+                    <Button color='primary' variant="contained" className={classes.actionButtom}>
                       Learn more
                     </Button>
                   </div>
@@ -136,7 +143,7 @@ class Main extends Component {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
-                  <div style={{marginBottom: 40, height: 65}}>
+                  <div className={classes.box}>
                     <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
                       Another box
                     </Typography>
@@ -145,7 +152,7 @@ class Main extends Component {
                     </Typography>
                   </div>
                   <div style={{display: 'flex', justifyContent: 'flex-end'}}>                          
-                    <Button style={{background: '#182841'}} color='primary' variant="contained" className={classes.actionButtom}>
+                    <Button color='primary' variant="contained" className={classes.actionButtom}>
                       Learn more
                     </Button>
                   </div>
@@ -153,7 +160,7 @@ class Main extends Component {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
-                  <div style={{marginBottom: 40, height: 65}}>
+                  <div className={classes.box}>
                     <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
                       A box with a carousel
                     </Typography>
@@ -161,30 +168,30 @@ class Main extends Component {
                       If you click in Getting Started, you will see a nice carousel
                     </Typography>
                   </div>
-                  <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                  <div className={classes.alignRight}>
                     <Button onClick={this.openDialog}  variant="outlined" className={classes.actionButtom}>
                       Learn more
                     </Button>                          
-                    <Button onClick={this.openGetStartedDialog} style={{background: '#182841'}} color='primary' variant="contained" className={classes.actionButtom}>
+                    <Button onClick={this.openGetStartedDialog} color='primary' variant="contained" className={classes.actionButtom}>
                       Dashboard
                     </Button>
                   </div>
                 </Paper>
               </Grid>
               <Grid container item xs={12}>
-                  <Grid item xs={12} spacing={24}>
+                  <Grid item xs={12}>
                     <Paper className={classes.paper}>
                       <div>
-                        <div style={{marginBottom: 40, height: 65}}>
-                          <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
+                        <div className={classes.box}>
+                          <Typography color='secondary' gutterBottom>
                             Full box
                           </Typography>
                           <Typography variant="body1" gutterBottom>
                             This is an example of a full-width box
                           </Typography>
                         </div>
-                        <div style={{display: 'flex', justifyContent: 'flex-end'}}>                          
-                          <Button style={{background: '#182841'}} color='primary' variant="contained" className={classes.actionButtom}>
+                        <div className={classes.alignRight}>                          
+                          <Button color='primary' variant="contained" className={classes.actionButtom}>
                             Learn more
                           </Button>
                         </div>

@@ -23,7 +23,7 @@ const styles = theme => ({
     boxShadow: 'none',
     borderBottom: `1px solid ${theme.palette.grey['100']}`,
     backgroundColor: 'white',
-    
+
   },
   inline: {
     display: 'inline'
@@ -113,20 +113,20 @@ class Topbar extends Component {
     }
 
   }
-  
+
   render() {
-    
+
     const { classes } = this.props;
-    
+
     return (
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
             <Grid container spacing={24} alignItems="baseline">
-              <Grid item xs={12} alignItems='baseline' className={classes.flex}>
+              <Grid item xs={12} className={classes.flex}>
                   <div className={classes.inline}>
                     <Typography variant="h6" color="inherit" noWrap>
                       <Link to='/' className={classes.link}>
-                        <img width={20} src={logo} />
+                        <img width={20} src={logo} alt="" />
                         <span className={classes.tagline}>Material Sense</span>
                       </Link>
                     </Typography>
@@ -144,11 +144,11 @@ class Topbar extends Component {
                         </IconButton>
                       </div>
                       <div className={classes.tabContainer}>
-                        <SwipeableDrawer anchor="right" open={this.state.menuDrawer} onClose={this.mobileMenuClose} >
+                        <SwipeableDrawer anchor="right" open={this.state.menuDrawer} onClose={this.mobileMenuClose} onOpen={this.mobileMenuOpen}>
                           <AppBar title="Menu" />
                           <List>
                             {Menu.map((item, index) => (
-                              <ListItem component={Link} to={{pathname: item.pathname, search: this.props.location.search}} button key={item.index}>
+                              <ListItem component={Link} to={{pathname: item.pathname, search: this.props.location.search}} button key={item.label}>
                                 <ListItemText primary={item.label} />
                               </ListItem>
                             ))}
@@ -165,10 +165,10 @@ class Topbar extends Component {
                           ))}
                         </Tabs>
                       </div>
-                    </React.Fragment>  
+                    </React.Fragment>
                   )}
               </Grid>
-            </Grid> 
+            </Grid>
         </Toolbar>
       </AppBar>
     )

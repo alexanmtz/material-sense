@@ -13,6 +13,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import Menu from './Menu';
 
 const logo = require('../images/logo.svg');
@@ -44,11 +45,17 @@ const styles = theme => ({
     display: 'inline-block',
     borderLeft: `1px solid ${theme.palette.grey['A100']}`,
     marginLeft: 32,
-    paddingLeft: 24
+    paddingLeft: 24,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '1.5em'
+    }
   },
   tagline: {
     display: 'inline-block',
-    marginLeft: 10
+    marginLeft: 10,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '0.8em'
+    }
   },
   iconContainer: {
     display: 'none',

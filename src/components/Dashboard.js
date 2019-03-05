@@ -174,13 +174,13 @@ class Dashboard extends Component {
         <CssBaseline />
         <Topbar currentPath={currentPath} />
         <div className={classes.root}>
-          <Grid container justify="center"> 
+          <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
                 <div className={classes.topBar}>
                   <div className={classes.block}>
                     <Typography variant="h6" gutterBottom>Dashboard</Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body1">
                       Adjust and play with our sliders.
                     </Typography>
                   </div>
@@ -197,7 +197,7 @@ class Dashboard extends Component {
                     <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body1">
                       Use slider to set the amount you need.
                     </Typography>
                     <div className={classes.blockCenter}>
@@ -223,7 +223,7 @@ class Dashboard extends Component {
                       <div>
                         <Typography variant="subtitle2">
                           150,000 USD
-                        </Typography> 
+                        </Typography>
                       </div>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ class Dashboard extends Component {
                     <Typography variant="subtitle1" gutterBottom>
                       Period
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body1">
                       A sample period
                     </Typography>
                     <div className={classes.blockCenter}>
@@ -261,7 +261,7 @@ class Dashboard extends Component {
                       <div>
                         <Typography variant="subtitle2">
                           6 months
-                        </Typography> 
+                        </Typography>
                       </div>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ class Dashboard extends Component {
                     <Typography variant="subtitle1" gutterBottom>
                       Start date
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body1">
                       Set your preferred start date.
                     </Typography>
                     <div className={classes.blockCenter}>
@@ -299,13 +299,13 @@ class Dashboard extends Component {
                       <div>
                         <Typography variant="subtitle2">
                           May 2019
-                        </Typography> 
+                        </Typography>
                       </div>
                     </div>
                   </div>
                 </Paper>
               </Grid>
-              <Grid container spacing={24} xs={12} justify="center">
+              <Grid container spacing={24} justify="center">
                 <Grid item xs={12} md={8} >
                   <Paper className={classes.paper} style={{position: 'relative'}}>
                     <Loading loading={loading} />
@@ -313,7 +313,7 @@ class Dashboard extends Component {
                       <Typography variant="subtitle1" gutterBottom>
                         Some details
                       </Typography>
-                      <Typography variant="body2">
+                      <Typography variant="body1">
                         Details about the graph
                       </Typography>
                       <div style={{marginTop: 14, marginBottom: 14}}>
@@ -351,7 +351,7 @@ class Dashboard extends Component {
                     </Typography>
                     <div className={classes.mainBadge}>
                       <VerifiedUserIcon style={{fontSize: 72}} fontSize={'large'} color={'secondary'} />
-                      <Typography variant="headline" color={'secondary'} gutterBottom>
+                      <Typography variant="h5" color={'secondary'} gutterBottom>
                         Verified
                       </Typography>
                     </div>

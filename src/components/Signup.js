@@ -114,11 +114,12 @@ class Signup extends Component {
     activeStep: 0,
     receivingAccount: '',
     termsChecked: false,
-    loading: true
+    loading: true,
+    labelWidth: 0
   }
 
   componentDidMount() {
-    
+
   }
 
   handleNext = () => {
@@ -174,11 +175,11 @@ class Signup extends Component {
         <CssBaseline />
         <div className={classes.root}>
           <Back />
-          <Grid container justify="center"> 
+          <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
                 <div className={classes.logo}>
-                  <img width={100} height={100} src={logo} />
+                  <img width={100} height={100} src={logo} alt="" />
                 </div>
                 <div className={classes.stepContainer}>
                   <div className={classes.stepGrid}>
@@ -200,7 +201,7 @@ class Signup extends Component {
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             Select
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             A item to select
                           </Typography>
                         </div>
@@ -239,10 +240,10 @@ class Signup extends Component {
                           <Typography variant="subtitle1" gutterBottom>
                             Sign & confirm
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             Sign and confirm loan agreement
                           </Typography>
-                          <Typography variant="bod1" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             One text to explain that
                           </Typography>
                         </Grid>
@@ -258,7 +259,7 @@ class Signup extends Component {
                           <Typography variant="subtitle1" gutterBottom>
                             Permissions
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             We need some permissions to proceed.
                           </Typography>
                         </div>
@@ -294,7 +295,7 @@ class Signup extends Component {
                             <Typography variant="h6" style={{fontWeight: 'bold'}} gutterBottom>
                               Collecting your data
                             </Typography>
-                            <Typography variant="body2" gutterBottom>
+                            <Typography variant="body1" gutterBottom>
                               We are processing your request
                             </Typography>
                           </div>
@@ -335,7 +336,7 @@ class Signup extends Component {
                          Cancel
                        </Button>
                      )}
-                     <Button 
+                     <Button
                        variant="contained"
                        color="primary"
                        onClick={this.handleNext}
@@ -345,9 +346,9 @@ class Signup extends Component {
                      >
                        {this.stepActions()}
                      </Button>
-                   </div> 
+                   </div>
                   )}
-                  
+
                 </div>
               </Grid>
             </Grid>

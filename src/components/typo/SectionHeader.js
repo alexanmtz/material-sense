@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import Typography from '@material-ui/core/Typography';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const styles = theme => ({
   sectionContainer: {
@@ -22,7 +21,7 @@ class SectionHeader extends Component {
         <Typography variant="subtitle1" className={classes.title}>
           {title}
         </Typography>
-        <Typography variant="body2" gutterBottom>
+        <Typography variant="body1" gutterBottom>
           {subtitle}
         </Typography>
       </div>

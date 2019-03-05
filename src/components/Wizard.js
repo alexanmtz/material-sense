@@ -109,11 +109,12 @@ class Wizard extends Component {
     activeStep: 0,
     receivingAccount: 'Home Account',
     repaimentAccount: 'Saving Account',
-    termsChecked: false
+    termsChecked: false,
+    labelWidth: 0
   }
 
   componentDidMount() {
-    
+
   }
 
   handleNext = () => {
@@ -157,7 +158,7 @@ class Wizard extends Component {
 
   goToDashboard = event => {
     const queryString = this.props.location.search
-    
+
     this.props.history.push({
       pathname: '/dashboard',
       search: queryString
@@ -176,7 +177,7 @@ class Wizard extends Component {
       <React.Fragment>
         <CssBaseline />
         <div className={classes.root}>
-          <Grid container justify="center"> 
+          <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
                 <Back />
@@ -200,7 +201,7 @@ class Wizard extends Component {
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             Information
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             General information about the service
                           </Typography>
                         </div>
@@ -239,7 +240,7 @@ class Wizard extends Component {
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             Bank information
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             Select account to receive the money
                           </Typography>
                         </div>
@@ -287,7 +288,7 @@ class Wizard extends Component {
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             Details
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             We need some details about any information
                           </Typography>
                         </div>
@@ -399,7 +400,7 @@ class Wizard extends Component {
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             Terms & Conditions
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             Please read through and accept the terms & conditions
                           </Typography>
                         </div>
@@ -407,7 +408,7 @@ class Wizard extends Component {
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             1. Your agreement
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                           By using this Site, you agree to be bound by, and to comply with, these Terms and Conditions. If you do not agree to these Terms and Conditions, please do not use this site.
 
 PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or otherwise alter these Terms and Conditions at any time. Unless otherwise indicated, amendments will become effective immediately. Please review these Terms and Conditions periodically. Your continued use of the Site following the posting of changes and/or modifications will constitute your acceptance of the revised Terms and Conditions and the reasonableness of these standards for notice of changes. For your information, this page was last updated as of the date at the top of these terms and conditions.
@@ -415,7 +416,7 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             2. Privacy
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             Please review our Privacy Policy, which also governs your visit to this Site, to understand our practices.
                             By using this Site, you agree to be bound by, and to comply with, these Terms and Conditions. If you do not agree to these Terms and Conditions, please do not use this site.
 
@@ -445,7 +446,7 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                           <Typography variant="subtitle1" style={{fontWeight: 'bold'}} gutterBottom>
                             Sign & confirm
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             Sign and confirm your agreement
                           </Typography>
                         </Grid>
@@ -459,9 +460,9 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                       <Grid item container xs={12}>
                         <Grid item xs={12}>
                           <Typography variant="subtitle1" gutterBottom>
-                            Congratulations 🎉
+                            Congratulations <span role="img" aria-label="conrats emoji">🎉</span>
                           </Typography>
-                          <Typography variant="body2" gutterBottom>
+                          <Typography variant="body1" gutterBottom>
                             We have now a positive response
                           </Typography>
                           <Button fullWidth variant='outlined'>
@@ -483,7 +484,7 @@ PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or 
                         Back
                       </Button>
                     )}
-                    <Button 
+                    <Button
                       variant="contained"
                       color="primary"
                       onClick={activeStep !== 5 ? this.handleNext : this.goToDashboard}

@@ -32,7 +32,7 @@ const tutorialSteps = [
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
   },
   {
-    llabel: 'A fifth label',
+    label: 'A fifth label',
     description: 'This is the fifth item on the label',
     imgPath:
       'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
@@ -95,7 +95,7 @@ class SwipeDialog extends Component {
       <BaseDialog {...this.props}>
         <div className={classes.container}>
           <div className={classes.gutterBottom}>
-            <img width={100} src={logo} />
+            <img width={100} src={logo} alt="" />
           </div>
           <div>
             <AutoPlaySwipeableViews
@@ -133,7 +133,7 @@ class SwipeDialog extends Component {
             <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
               {tutorialSteps[activeStep].label}
             </Typography>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body2" gutterBottom>
               {tutorialSteps[activeStep].description}
             </Typography>
           </div>

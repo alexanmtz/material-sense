@@ -25,7 +25,7 @@ class InstructionDialog extends Component {
     return (
       <BaseDialog {...this.props} >
         <div className={classes.bottomMargin}>
-          <Typography variant="body1" gutterBottom>
+          <Typography variant="body2" gutterBottom>
             This is a sample introduction
           </Typography>
         </div>
@@ -35,7 +35,7 @@ class InstructionDialog extends Component {
         <Button component={Link} to='/dashboard' variant='outlined' onClick={this.handleClose} color="primary" autoFocus>
           Dashboard
         </Button>
-      </BaseDialog>   
+      </BaseDialog>
     )
   }
 }

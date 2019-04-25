@@ -1,3 +1,9 @@
+# If you're using this template, please add below your project and send a PR:
+
+### Projects using this template:
+- Ahorta Client: https://github.com/worknenjoy/ahorta-client
+
+
 # React Material UI template - Material Sense
 A full simple application for react material ui
 

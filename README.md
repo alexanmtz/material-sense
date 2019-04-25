@@ -1,6 +1,6 @@
-# If you're using this template, please add below your project and send a PR:
+### If you're using this template, please add below your project and send a PR:
 
-### Projects using this template:
+#### Projects using this template:
 - Ahorta Client: https://github.com/worknenjoy/ahorta-client
 
 

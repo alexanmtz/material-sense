@@ -1,5 +1,8 @@
 ### If you're using this template, please add below your project and send a PR:
 
+### Help to fund this project
+https://opencollective.com/material-sense
+
 #### Projects using this template:
 - Ahorta Client: https://github.com/worknenjoy/ahorta-client
 

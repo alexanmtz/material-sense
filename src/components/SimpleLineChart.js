@@ -4,7 +4,7 @@ import BarChart from 'recharts/lib/chart/BarChart';
 import Bar from 'recharts/lib/cartesian/Bar';
 import XAxis from 'recharts/lib/cartesian/XAxis';
 import Tooltip from 'recharts/lib/component/Tooltip';
-import { withTheme } from '@material-ui/core/styles';
+import { withTheme } from '@material-ui/styles';
 
 function SimpleLineChart(props) {
   const { theme, data } = props;
@@ -20,4 +20,4 @@ function SimpleLineChart(props) {
   );
 }
 
-export default withTheme()(SimpleLineChart);
+export default withTheme(SimpleLineChart);

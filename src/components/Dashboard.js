@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import withStyles from '@material-ui/core/styles/withStyles';
+import withStyles from '@material-ui/styles/withStyles';
 import { withRouter, Link } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
@@ -42,6 +42,7 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 3,
+    margin: theme.spacing.unit * 2,
     textAlign: 'left',
     color: theme.palette.text.secondary
   },
@@ -174,7 +175,7 @@ class Dashboard extends Component {
         <CssBaseline />
         <Topbar currentPath={currentPath} />
         <div className={classes.root}>
-          <Grid container justify="center">
+          <Grid container justify="center" >
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
                 <div className={classes.topBar}>
@@ -305,7 +306,7 @@ class Dashboard extends Component {
                   </div>
                 </Paper>
               </Grid>
-              <Grid container spacing={24} justify="center">
+              <Grid container spacing={4} justify="center">
                 <Grid item xs={12} md={8} >
                   <Paper className={classes.paper} style={{position: 'relative'}}>
                     <Loading loading={loading} />

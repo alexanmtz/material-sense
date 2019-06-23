@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from '@material-ui/core/styles'
 import './App.css';
 import Routes from './routes'
 import { blue, indigo } from '@material-ui/core/colors'
@@ -27,9 +28,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <Routes />
-        </MuiThemeProvider>
+        </ThemeProvider>
       </div>
     );
   }

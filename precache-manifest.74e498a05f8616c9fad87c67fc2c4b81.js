@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8957bffe3f237da9e5ec253e00b2480a",
+    "revision": "d774c4e5ca0626fdffd6b3bd69dd0453",
     "url": "/material-sense/index.html"
   },
   {
-    "revision": "8925ab1fb1cad4e18a5b",
+    "revision": "a115f509d33cf3cae0fe",
     "url": "/material-sense/static/css/main.68a98085.chunk.css"
   },
   {
-    "revision": "906d98efcd5aec7b0567",
-    "url": "/material-sense/static/js/2.031cb5a5.chunk.js"
+    "revision": "54119ce91b9d41174ef7",
+    "url": "/material-sense/static/js/2.a88844b3.chunk.js"
   },
   {
-    "revision": "8925ab1fb1cad4e18a5b",
-    "url": "/material-sense/static/js/main.7bf1a11d.chunk.js"
+    "revision": "a115f509d33cf3cae0fe",
+    "url": "/material-sense/static/js/main.94609add.chunk.js"
   },
   {
     "revision": "934102074e734d235b58",

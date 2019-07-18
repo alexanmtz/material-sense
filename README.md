@@ -84,3 +84,33 @@ _the 2222 port intend to make work on Azure websites as container for default, c
 ![Signup](screenshot-signup.png)
 ![Wizard](screenshot-wizard.png)
 ![Cards](screenshot-cards.png)
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/alexanmtz/material-sense/graphs/contributors"><img src="https://opencollective.com/material-sense/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/material-sense/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/material-sense"><img src="https://opencollective.com/material-sense/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/material-sense/contribute)]
+
+<a href="https://opencollective.com/material-sense/organization/0/website"><img src="https://opencollective.com/material-sense/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/1/website"><img src="https://opencollective.com/material-sense/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/2/website"><img src="https://opencollective.com/material-sense/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/3/website"><img src="https://opencollective.com/material-sense/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/4/website"><img src="https://opencollective.com/material-sense/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/5/website"><img src="https://opencollective.com/material-sense/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/6/website"><img src="https://opencollective.com/material-sense/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/7/website"><img src="https://opencollective.com/material-sense/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/8/website"><img src="https://opencollective.com/material-sense/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/material-sense/organization/9/website"><img src="https://opencollective.com/material-sense/organization/9/avatar.svg"></a>

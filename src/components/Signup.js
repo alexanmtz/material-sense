@@ -42,7 +42,7 @@ const styles = theme => ({
     paddingBottom: 500
   },
   grid: {
-    margin: `0 ${theme.spacing.unit * 2}px`
+    margin: `0 ${theme.spacing(2)}px`
   },
   smallContainer: {
     width: '60%'
@@ -72,17 +72,17 @@ const styles = theme => ({
     backgroundColor: theme.palette.primary['A100']
   },
   backButton: {
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing(1),
   },
   outlinedButtom: {
     textTransform: 'uppercase',
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   stepper: {
     backgroundColor: 'transparent'
   },
   paper: {
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
     textAlign: 'left',
     color: theme.palette.text.secondary
   },
@@ -96,7 +96,7 @@ const styles = theme => ({
     width: '100%'
   },
   selectEmpty: {
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
   }
 })
 

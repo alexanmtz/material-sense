@@ -31,14 +31,14 @@ const styles = theme => ({
     }
   },
   paper: {
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
     textAlign: 'left',
     color: theme.palette.text.secondary,
   },
   rangeLabel: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingTop: theme.spacing.unit * 2
+    paddingTop: theme.spacing(2)
   },
   topBar: {
     display: 'flex',
@@ -48,19 +48,19 @@ const styles = theme => ({
   },
   outlinedButtom: {
     textTransform: 'uppercase',
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   actionButtom: {
     textTransform: 'uppercase',
-    margin: theme.spacing.unit,
+    margin: theme.spacing(1),
     width: 152
   },
   blockCenter: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     textAlign: 'center'
   },
   block: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
   },
   box: {
     marginBottom: 40,

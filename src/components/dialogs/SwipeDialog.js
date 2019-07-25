@@ -61,7 +61,7 @@ const styles = theme => ({
     height: 65
   },
   bottomMargin: {
-    marginBottom: theme.spacing.unit * 2
+    marginBottom: theme.spacing(2)
   }
 });
 

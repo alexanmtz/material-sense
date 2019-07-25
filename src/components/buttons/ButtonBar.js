@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   primary: {
-    marginRight: theme.spacing.unit * 2
+    marginRight: theme.spacing(2)
   },
   secondary: {
     background: theme.palette.secondary['100'],

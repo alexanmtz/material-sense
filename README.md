@@ -1,8 +1,3 @@
-<!--
-<a href=“https://tracking.gitads.io/?repo=https://github.com/alexanmtz/material-sense”>
- <img src="https://images.gitads.io/https://github.com/alexanmtz/material-sense" alt=“GitAds”/> </a>
--->
-
 ### If you're using this template, please add below your project and send a PR:
 - Alexandre Magno (http://ahorta.io)
 

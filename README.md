@@ -1,3 +1,6 @@
+Material Sense is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
+<a href="https://tracking.gitads.io/?repo=material-sense"><img src="https://images.gitads.io/material-sense" alt="GitAds"/></a>
+
 ### If you're using this template, please add below your project and send a PR:
 - Alexandre Magno (http://ahorta.io)
 
@@ -115,5 +118,3 @@ Support this project with your organization. Your logo will show up here with a 
 <a href="https://opencollective.com/material-sense/organization/7/website"><img src="https://opencollective.com/material-sense/organization/7/avatar.svg"></a>
 <a href="https://opencollective.com/material-sense/organization/8/website"><img src="https://opencollective.com/material-sense/organization/8/avatar.svg"></a>
 <a href="https://opencollective.com/material-sense/organization/9/website"><img src="https://opencollective.com/material-sense/organization/9/avatar.svg"></a>
-
-<a href="https://tracking.gitads.io/?repo=material-sense"><img src="https://images.gitads.io/material-sense" alt="GitAds"/></a>

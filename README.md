@@ -1,6 +1,3 @@
-Material Sense is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
-<a href="https://tracking.gitads.io/?repo=material-sense"><img src="https://images.gitads.io/material-sense" alt="GitAds"/></a>
-
 ### If you're using this template, please add below your project and send a PR:
 - Alexandre Magno (http://ahorta.io)
 

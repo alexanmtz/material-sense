@@ -357,7 +357,7 @@ class Dashboard extends Component {
                             variant="subtitle2"
                             gutterBottom
                           >
-                            Othe type
+                            Other type
                           </Typography>
                           <Typography
                             className={classes.inlining}

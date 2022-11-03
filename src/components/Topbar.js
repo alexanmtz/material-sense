@@ -59,7 +59,9 @@ const styles = theme => ({
   iconContainer: {
     display: "none",
     [theme.breakpoints.down("sm")]: {
-      display: "block"
+      display: "flex", 
+      justifyContent: 'center', 
+      alignItems: 'center', 
     }
   },
   iconButton: {
